@@ -3,7 +3,7 @@ import {BrowserRouter} from "react-router-dom";
 
 import App from "./App";
 
-import "./assets/styles/global.scss"
+import "./styles/index.scss"
 
 render(
     <BrowserRouter>
