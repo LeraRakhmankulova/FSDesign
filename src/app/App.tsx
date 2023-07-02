@@ -1,15 +1,14 @@
-import React, {Suspense, useContext, useState} from 'react';
-
+import React, {Suspense} from 'react';
 import {Link, Routes,} from "react-router-dom";
 import {Route} from "react-router";
 
-import {MainPageAsync} from "./pages/MainPage/MainPage.lazy";
-import {AboutPageAsync} from "./pages/AboutPage/AboutPage.lazy";
+import {useTheme} from "app/theme/useTheme";
+import {classNames} from "shared/lib/classNames/classNames";
 
+import {MainPage} from "pages/MainPage";
+import {AboutPage} from "pages/AboutPage";
 
 import "./styles/index.scss"
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
 
 
 const App = () => {
@@ -22,8 +21,8 @@ const App = () => {
             <button onClick={toggleTheme} className='test'>Toggle</button>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path='/' element={<MainPageAsync/>}/>
-                    <Route path='/about' element={<AboutPageAsync/>}/>
+                    <Route path='/' element={<MainPage/>}/>
+                    <Route path='/about' element={<AboutPage/>}/>
                 </Routes>
             </Suspense>
         </div>

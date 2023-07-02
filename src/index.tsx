@@ -3,8 +3,8 @@ import {render} from "react-dom";
 
 import React from "react";
 
-import App from "./App";
-import ThemeProvider from "./theme/ThemeProvider";
+import App from "./app/App";
+import ThemeProvider from "./app/theme/ThemeProvider";
 
 
 render(
