@@ -1,6 +1,8 @@
+import './index.scss'
+
 const MainPage = () => {
     return (
-        <div>
+        <div className='page'>
             This is the main page!
         </div>
     )
