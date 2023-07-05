@@ -14,7 +14,6 @@ interface NavbarProps {
 export const Navbar = ({className}: NavbarProps) => {
     return (
         <div className={classNames(styles.navbar, {}, [className])}>
-            <ThemeToggle/>
             <div className={styles.links}>
                 <AppLink to='/' className={styles.mainLink}>Main</AppLink>
                 <AppLink to='/about' className={styles.aboutLink}>About</AppLink>
