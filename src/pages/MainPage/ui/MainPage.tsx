@@ -1,17 +1,10 @@
-import {useTranslation} from "react-i18next";
-import {changeLanguage} from "i18next";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
-    const {t, i18n} = useTranslation();
-
-    const toggleLng = () => {
-        changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
-    };
-
+    const {t} = useTranslation();
     return (
         <div className='page'>
-            {t('Главная страница')}
-            <button onClick={toggleLng}>toggle language</button>
+          {t('Главная страница')}
         </div>
     )
 }
