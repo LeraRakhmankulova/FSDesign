@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import styles from './index.module.scss'
 
-import React from "react";
 
 import {classNames} from "shared/lib/classNames/classNames";
 
@@ -12,11 +12,12 @@ interface NavbarProps {
 }
 
 export const Navbar = ({className}: NavbarProps) => {
+    const { t } = useTranslation()
     return (
         <div className={classNames(styles.navbar, {}, [className])}>
             <div className={styles.links}>
-                <AppLink to='/' className={styles.mainLink}>Main</AppLink>
-                <AppLink to='/about' className={styles.aboutLink}>About</AppLink>
+                <AppLink to='/' className={styles.mainLink}>{t('Главная')}</AppLink>
+                <AppLink to='/about' className={styles.aboutLink}>{t('О нас')}</AppLink>
             </div>
         </div>
     )

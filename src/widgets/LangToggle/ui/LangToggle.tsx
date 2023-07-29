@@ -15,7 +15,7 @@ export const LangToggle:FC<LangToggleProps> = ({className}) => {
   };
   return (
     <Button onClick={toggleLng} theme={ButtonTheme.CLEAR}>
-      {t('Перевод')}
+      {t('РУ')}
       </Button>
   )
 }
