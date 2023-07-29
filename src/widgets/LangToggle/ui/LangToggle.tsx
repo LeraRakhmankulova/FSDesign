@@ -1,22 +1,21 @@
-import { FC } from "react"
-import {useTranslation} from "react-i18next";
-import {changeLanguage} from "i18next";
+import { FC } from "react";
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 
-interface LangToggleProps{
+interface LangToggleProps {
   className?: string
 }
 
-export const LangToggle:FC<LangToggleProps> = ({className}) => {
-  const {t, i18n} = useTranslation();
+export const LangToggle: FC<LangToggleProps> = () => {
+  const { t, i18n } = useTranslation();
 
   const toggleLng = () => {
-      changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    changeLanguage(i18n.language === "ru" ? "en" : "ru");
   };
   return (
     <Button onClick={toggleLng} theme={ButtonTheme.CLEAR}>
-      {t('РУ')}
-      </Button>
-  )
-}
-
+      {t("РУ")}
+    </Button>
+  );
+};

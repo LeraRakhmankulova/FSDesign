@@ -1,12 +1,12 @@
-import {ResolveOptions} from "webpack";
-import {BuildOptions} from "./types/config";
+import { ResolveOptions } from "webpack";
+import { BuildOptions } from "./types/config";
 
-export function buildResolves({paths}: BuildOptions): ResolveOptions {
+export function buildResolves({ paths }: BuildOptions): ResolveOptions {
     return {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: [".tsx", ".ts", ".js"],
         preferAbsolute: true,
-        modules: [paths.src, 'node_modules'],
+        modules: [paths.src, "node_modules"],
         // mainFiles: ['index'],
-        alias: {}//если указать @ будет с собаками :)
-    }
+        alias: {}, // если указать @ будет с собаками :)
+    };
 }
