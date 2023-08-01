@@ -4,9 +4,7 @@
   border: 0;
 }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -25,9 +23,7 @@ nav, footer, header, aside {
 html, body {
   height: 100%;
   width: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 input, button, textarea {
