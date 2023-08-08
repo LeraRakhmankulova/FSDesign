@@ -1,5 +1,11 @@
 import { classNames } from "./classNames";
 
-test("adds 1 + 2 to equal 3", () => {
-    expect(classNames("color: red")).toBe("color: red");
+describe("classNames", () => {
+    test("test1", () => {
+        expect(classNames("class")).toBe("class")
+    })
+
+    test("test2", () => {
+        expect(classNames("class1", {}, ["class2", "class3"])).toBe("class1 class2 class3")
+    })
 });

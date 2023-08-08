@@ -11,7 +11,7 @@
     "lint:fix": "eslint \"**/*.{ts, tsx}\" --fix",
     "stylelint:test": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
-    "test": "jest"
+    "unit": "jest --config ./config/jest/jest.config.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/LeraRakhmankulova/ulbi-pro#readme",
   "devDependencies": {
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/webpack": "^8.0.1",
     "@types/jest": "^29.5.3",
@@ -50,6 +52,8 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "i18next": "^23.2.3",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",

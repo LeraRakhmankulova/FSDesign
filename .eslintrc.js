@@ -19,7 +19,6 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     indent: ["off", "tab"],
-    "linebreak-style": ["error", "windows"],
     quotes: ["error", "double"],
     semi: ["off", "never"],
     "react/react-in-jsx-scope": "off",
@@ -36,6 +35,7 @@ module.exports = {
     "react/require-default-props": "off",
     "react/function-component-definition": "off",
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-undef": "off"
+    "no-undef": "off",
+    "linebreak-style": "off"
   },
 }
