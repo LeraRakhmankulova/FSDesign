@@ -14,14 +14,17 @@
         "./src/*"
       ]
     },
-    //вместо require
     "allowSyntheticDefaultImports": true
-    //вместо * as
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
-    }
+    },
+    "includes": [
+      "./config/jest/setupTests.ts"
+    ],
   },
-  "lib": ["es2017"]
+  "lib": [
+    "es2017"
+  ]
 }
